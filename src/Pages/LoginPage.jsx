@@ -4,7 +4,11 @@ import { FlaskConical, Mail, LockIcon, MoveRightIcon } from "lucide-react"
 const LoginPage = () => {
   return (
     <div className="flex md:items-center sm:pt-[220px] justify-center w-screen">
-       <form className="w-full max-w-lg flex flex-col text-center justify-center py-[32px] h-auto rounded-lg shadow-sm shadow-gray-500">
+       <motion.form 
+       className="w-full max-w-lg flex flex-col text-center justify-center py-[32px] h-auto rounded-lg shadow-sm shadow-gray-500"
+       initial={{opacity:0, scale:0}}
+       animate={{opacity:1, scale:1}}
+       >
           <div className="flex flex-row gap-2 justify-center items-center text-5xl">
             <FlaskConical size={48}/> Flask
           </div>
@@ -38,7 +42,7 @@ const LoginPage = () => {
         <button className="flex flex-row items-center btn btn-primary btn-outline mt-4 px-12 text-xl py-6">Login <MoveRightIcon /></button>
         <p className="mt-2">Don't have an account? <span className="text-primary hover:underline cursor-pointer">Sing up</span></p>
         </div>
-       </form>
+       </motion.form>
     </div>
   )
 }
